@@ -1,7 +1,7 @@
 class AuthContent {
     render() {
         return `
-        <h1>auth</h1>
+        <h1 class="title">auth</h1>
         `
     }
 }

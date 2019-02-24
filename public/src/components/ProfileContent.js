@@ -1,7 +1,7 @@
 class ProfileContent {
     render() {
         return `
-        <h1>profile</h1>
+        <h1 class="title">profile</h1>
         `
     }
 }

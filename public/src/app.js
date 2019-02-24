@@ -4,6 +4,10 @@ import AuthPageController from "./controllers/AuthPageController";
 import ProfilePageController from "./controllers/ProfilePageController";
 import HomePageController from "./controllers/HomePageController";
 import NotFoundPageController from "./controllers/NotFoundPageController";
+import SignUpPageController from "./controllers/SignUpPageController";
+import AuthorsPageController from "./controllers/AuthorsPageController";
+import GamePageController from "./controllers/GamePageController";
+import AboutPageController from "./controllers/AboutPageController";
 
 const app = document.getElementById('root');
 const routes = {};
@@ -49,4 +53,10 @@ window.addEventListener('load', router);
 
 route('/', HomePageController);
 route('/profile', ProfilePageController);
+
 route('/auth', AuthPageController);
+
+route('/signup', SignUpPageController);
+route('/authors', AuthorsPageController);
+route('/game', GamePageController);
+route('/about', AboutPageController);

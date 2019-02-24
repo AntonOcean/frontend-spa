@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&subset=cyrillic');
-
 body {
   margin: 0;
   padding: 0;
@@ -28,11 +26,5 @@ a {
   text-decoration:none;
 }
 
-
-.container {
-  display: flex;
-}
-
-.menu__item_active {
-  color: red;
-}
+@import "home-page";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&subset=cyrillic');
