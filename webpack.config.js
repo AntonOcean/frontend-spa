@@ -12,12 +12,12 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "eslint-loader",
-            },
+            // {
+            //     enforce: "pre",
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     loader: "eslint-loader",
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -42,6 +42,17 @@ module.exports = {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.ttf$/,
+                use: [
+                    {
+                        loader: 'ttf-loader',
+                        options: {
+                            name: './font/[name].[ext]',
+                        },
+                    },
+                ]
             },
         ]
     },

@@ -1,12 +1,8 @@
-import authIcon from '../../img/sign_in.svg';
-import authorsIcon from '../../img/users.svg';
-import signupIcon from '../../img/access.svg';
-import gameIcon from '../../img/game1.svg';
 import btn from "./menu/btn";
 import header from "./menu/header";
 
 
-class MenuContent { // контроллер
+class MenuContent {
     constructor () {
         this.header = header;
         this.btn = btn;
@@ -17,20 +13,13 @@ class MenuContent { // контроллер
          ${this.header()}
 
         <nav class="menu__nav">
-            ${this.btn("Авторизация", "/auth", authIcon)}
-            
-            ${this.btn("Регистрация", "/signup", signupIcon)}
-
-            ${this.btn("Авторы", "/authors", authorsIcon)}
-
-            ${this.btn("Играть", "/game", gameIcon)}
-
-            <div class="menu__nav__item menu__nav__item__href">
-                <a href="#/about">
-                    О проекте
-                </a>
-            </div>
-        </nav>
+                ${this.btn('Профиль', '/profile')}
+                ${this.btn('Авторизация', '/auth')}
+                ${this.btn('Регистрация', '/signup')}
+                ${this.btn('Авторы', '/authors')}
+                ${this.btn('Играть', '/game')}
+                ${this.btn('Таблица лидеров', '/leaders')}
+           </nav>
         `
     }
 
@@ -38,7 +27,7 @@ class MenuContent { // контроллер
         if (!name) {
             return
         }
-        let menuButtons = document.getElementsByClassName('menu__nav__item');
+        let menuButtons = document.getElementsByClassName('menu-button');
 
         this.disactivateButtons();
 
@@ -47,16 +36,16 @@ class MenuContent { // контроллер
         })[0];
 
         if (button) {
-            button.classList.add("menu__nav__item_selected");
+            button.classList.add("menu-button_selected");
         }
     }
 
     static disactivateButtons() {
-        let menuButtons = document.getElementsByClassName('menu__nav__item');
+        let menuButtons = document.getElementsByClassName('menu-button');
 
         if (menuButtons) {
             [].forEach.call(menuButtons, (item) => {
-                item.classList.remove("menu__nav__item_selected");
+                item.classList.remove("menu-button_selected");
             });
         }
     }
